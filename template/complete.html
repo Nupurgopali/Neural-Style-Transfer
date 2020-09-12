@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+    <title>Neural Style Transfer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/cont.css') }}">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300;700&family=Open+Sans:wght@300;600&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#110c11;">
+    <div>
+    <h1 class="head">YOUR GENERATED IMAGE</h1>
+    </div>
+    <br>
+    <br>
+    <img class="center" src="{{ url_for('static',filename=user_image) }}">
+    <br>
+    <br>
+    <div class="uploadform">
+    <form  action="{{ url_for('delete_img') }}" method="POST" enctype="multipart/form-data">
+      <input  type="submit" class="btn btn-outline-secondary" value="Upload a new image">
+    </form>
+    </div>
+    
+
+</body>
+</html>
